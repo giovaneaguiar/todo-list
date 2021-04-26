@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       tasks: [
-        // Passar esses arrays para o componente TaskGrid
+        // Passar esses arrays para o componente
         { name: "Lavar a louça", pending: false },
         { name: "Comprar", pending: true },
       ],

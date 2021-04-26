@@ -1,6 +1,6 @@
 <template>
   <div class="task-grid">
-      <!-- v-if: se tiver alguma task -->
+    <!-- v-if: se tiver alguma task -->
     <template v-if="tasks.length">
       <!-- faz um for para mostrar dentro de cada uma das divs o nome das tasks -->
       <!-- :key="task.name" serve para não aceitar duas tasks com o mesmo nome -->
@@ -27,4 +27,20 @@ export default {
 };
 </script>
 <style>
+.task-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* flex-wrap: wrap --- colocar em linha */
+}
+
+.task-grid .task {
+  margin: 10px;
+}
+
+/* css do texto quando não tiver tarefas na tela. */
+.no-task {
+  color: #aaa;
+  font-size: 1.7rem;
+}
 </style>
