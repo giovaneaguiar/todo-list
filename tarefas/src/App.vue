@@ -2,11 +2,26 @@
   <div id="app">
     <!-- Título -->
     <h1>Tarefas</h1>
+    <TaskGrid :tasks="tasks"></TaskGrid>
   </div>
 </template>
 
 <script>
-export default {};
+import TaskGrid from "./components/TaskGrid.vue";
+export default {
+  components: {
+    TaskGrid,
+  },
+  data() {
+    return {
+      tasks: [
+        // Passar esses arrays para o componente TaskGrid
+        { name: "Lavar a louça", pending: false },
+        { name: "Comprar", pending: true },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
