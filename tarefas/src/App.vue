@@ -30,7 +30,7 @@ export default {
 */
 body {
   font-family: "Lato", sans-serif;
-  background: linear-gradient(to right, rgb(71, 60, 139), rgb(72, 118, 255));
+  background: linear-gradient(to right, rgb(93, 71, 139), rgb(85, 26, 139));
   color: #fff;
 }
 
