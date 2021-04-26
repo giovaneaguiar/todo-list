@@ -2,7 +2,9 @@
   <div id="app">
     <!-- Título -->
     <h1>Tarefas</h1>
-    <New-Task></New-Task>
+    <!-- @taskAdded="addTask" serve para monitorar quando o evento acontecer,
+    chamar o método -->
+    <New-Task @taskAdded="addTask"></New-Task>
     <TaskGrid :tasks="tasks"></TaskGrid>
     
   </div>
@@ -24,6 +26,22 @@ export default {
       ],
     };
   },
+  
+  methods: {
+    
+    addTask(task){
+      // Cria consts para saber se a task que vai ser adicionada existe ou não na lista.
+      const sameName = t => t.name === task.name
+      const reallyNew = this.tasks.filter(sameName).length == 0
+      if(reallyNew) {
+        // Se for realmente novo, inclui no array, se não, ignora.
+        this.tasks.push({name: task.name,
+        pending: task.pending || true})
+
+      }
+      
+    }
+  }
 };
 </script>
 
