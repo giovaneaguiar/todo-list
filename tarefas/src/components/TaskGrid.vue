@@ -1,11 +1,14 @@
 <template>
   <div class="task-grid">
-    <template>
+      <!-- v-if: se tiver alguma task -->
+    <template v-if="tasks.length">
       <!-- faz um for para mostrar dentro de cada uma das divs o nome das tasks -->
       <!-- :key="task.name" serve para não aceitar duas tasks com o mesmo nome -->
       <!-- :task="task" serve para passar o valor como um objeto, e não como string -->
       <Task v-for="task in tasks" :key="task.name" :task="task"></Task>
     </template>
+    <!-- se não tiver task alguma, imprime a mensagem -->
+    <p v-else class="no-task">Sua vida está em dia :)</p>
   </div>
 </template>
 
