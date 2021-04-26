@@ -1,5 +1,5 @@
 <template>
-<div class="tasks">
+<div class="task-grid">
 
     <template>
         <!-- faz um for para mostrar dentro de cada uma das divs o nome das tasks -->
