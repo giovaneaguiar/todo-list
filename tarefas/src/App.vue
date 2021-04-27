@@ -5,7 +5,7 @@
     <!-- @taskAdded="addTask" serve para monitorar quando o evento acontecer,
     chamar o método -->
     <New-Task @taskAdded="addTask"></New-Task>
-    <TaskGrid :tasks="tasks"></TaskGrid>
+    <TaskGrid @taskDeleted="deleteTask" :tasks="tasks"></TaskGrid>
     
   </div>
 </template>
@@ -20,9 +20,7 @@ export default {
   data() {
     return {
       tasks: [
-        // Passar esses arrays para o componente
-        { name: "Lavar a louça", pending: false },
-        { name: "Comprar", pending: true },
+        //inicialmente vazios, ou seja, sem tarefas iniciais no projeto.
       ],
     };
   },
@@ -40,8 +38,14 @@ export default {
 
       }
       
+    },
+    deleteTask(i){
+      this.tasks.splice(i, 1);
+      // i: indice do array que quero deletar, ou seja, qual task eu quero
+      // 1: numero de tasks que quero deletar, ou seja, 1 task apenas.
     }
   }
+
 };
 </script>
 
