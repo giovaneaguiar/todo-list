@@ -5,7 +5,9 @@
     <!-- @taskAdded="addTask" serve para monitorar quando o evento acontecer,
     chamar o método -->
     <New-Task @taskAdded="addTask"></New-Task>
-    <TaskGrid @taskDeleted="deleteTask" :tasks="tasks"></TaskGrid>
+    <TaskGrid @taskDeleted="deleteTask"
+      @taskStateChanged="toggleState"
+     :tasks="tasks"></TaskGrid>
     
   </div>
 </template>
@@ -43,6 +45,12 @@ export default {
       this.tasks.splice(i, 1);
       // i: indice do array que quero deletar, ou seja, qual task eu quero
       // 1: numero de tasks que quero deletar, ou seja, 1 task apenas.
+    },
+
+    toggleState(i){
+      // se estiver pendente, ele coloca falso
+      // se não estiver pendente, ele coloca verdadeiro
+      this.tasks[i]. pending = !this.tasks[i].pending 
     }
   }
 

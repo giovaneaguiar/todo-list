@@ -6,7 +6,10 @@
       <!-- :key="task.name" serve para não aceitar duas tasks com o mesmo nome -->
       <!-- :task="task" serve para passar o valor como um objeto, e não como string -->
       <Task v-for="(task, i) in tasks" :key="task.name" 
-      @taskDeleted="$emit('taskDeleted', i)" :task="task"></Task>
+      :task="task"
+      @taskDeleted="$emit('taskDeleted', i)" 
+      @taskStateChanged="$emit('taskStateChanged', i)"
+      ></Task>
     </template>
     <!-- se não tiver task alguma, imprime a mensagem -->
     <p v-else class="no-task">Sua vida está em dia :)</p>
