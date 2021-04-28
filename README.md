@@ -3,8 +3,12 @@
 
 ## 🎨 Layout 
 
-<p align="center" ><img src="/tarefas/src/assets/gif.gif"> 
-</p>
+<img src="/tarefas/src/assets/2.png">
+<img src="/tarefas/src/assets/3.png">
+<img src="/tarefas/src/assets/4.png">
+<img src="/tarefas/src/assets/5.png">
+<img src="/tarefas/src/assets/1.png">
+
 
 ### Pré-requisitos
 
