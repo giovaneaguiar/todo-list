@@ -34,6 +34,18 @@ export default {
       // retorna calculo correto para fazer a barra de porcentagem.
     },
   },
+  watch: {
+    //monitorar as tasks - sempre que o array mudar, ele chama essa função
+    tasks: {
+      deep: true,
+      //olhar profundamente
+      handler() {
+        localStorage.setItem("tasks", JSON.stringify(this.tasks));
+        //monitorar os elementos em si, para quando atualizar
+        //o navegador, continuar as tasks.
+      },
+    },
+  },
   data() {
     return {
       tasks: [
@@ -63,6 +75,18 @@ export default {
       // se não estiver pendente, ele coloca verdadeiro
       this.tasks[i].pending = !this.tasks[i].pending;
     },
+  },
+  created() {
+    const json = localStorage.getItem("tasks");
+    const array = JSON.parse(json);
+    if (Array.isArray(array)) {
+      //se for um array de fato...
+      this.tasks = array;
+      //voce seta o valor desse array no this.tasks.
+    } else {
+      this.tasks = [];
+      //se não, utiliza um array vazio.
+    }
   },
 };
 </script>
