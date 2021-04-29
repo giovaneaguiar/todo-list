@@ -1,6 +1,6 @@
 <h1 align="center">Tarefas</h1>
-<p align="center">Aplicação <strong>"TODO"</strong> (Lista de todas as tarefas que você precisa realizar), utilizando <strong>Vue CLI</strong> e focado no <strong>front-end
-  </strong>.</p>
+<p align="center">Aplicação <strong>"TODO"</strong> (Lista de todas as tarefas que você precisa realizar), utilizando <strong>Vue CLI</strong> e focado no <strong>front-end.
+  </strong></p>
 
 ## 🎨 Layout 
 
