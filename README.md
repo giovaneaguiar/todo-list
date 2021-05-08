@@ -27,11 +27,11 @@ $ git clone <https://github.com/giovaneaguiar/TODO-Giovane-Aguiar>
 # Acesse a pasta do projeto no terminal/cmd
 $ cd TODO-Giovane-Aguiar
 
-# Instale as dependências (de maneira global)
-$ npm install
-
 # Vá para a pasta tarefas
 $ cd tarefas
+
+# Instale as dependências
+$ npm install
 
 # Execute o frontend
 $ npm run serve
