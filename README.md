@@ -41,6 +41,6 @@ $ npm run serve
 
 ### 🛠 Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes <strong>ferramentas</strong> foram usadas na construção do projeto:
 - [Vue JS](https://br.vuejs.org)
 - [Vue CLI](https://cli.vuejs.org/guide/)
