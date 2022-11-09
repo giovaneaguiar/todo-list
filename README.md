@@ -1,5 +1,5 @@
 <h1 align="center">Tarefas</h1>
-<p align="center">Aplicação <strong>"TODO"</strong> (Lista de todas as tarefas que você precisa realizar), utilizando <strong>Vue CLI</strong> e focado no front-end.
+<p align="center">Aplicação <strong>"TO-DO"</strong> (Lista de todas as tarefas que você precisa realizar), utilizando <strong>Vue CLI</strong> e focado no front-end.
   </p>
 
 ## 🎨 Layout 
